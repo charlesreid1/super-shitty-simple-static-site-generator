@@ -15,6 +15,15 @@ Deploy your one single HTML file with GitHub Pages.
 Now put your feet up, turn off the computer, and pat
 yourself on the back, champ. You just launched an app.
 
+## How the fuck do I use this repo?
+
+You don't, dumbass, this is my repo. You can fork this
+repo, if you want to show off how fucking smart you are,
+but you should probably just set up your own repo
+and then put all the shit that's in this repo into your repo.
+
+Don't overcomplicate it.
+
 ## How the fuck do I build it?
 
 You wanna build the project? Okay skipper, strap in.
@@ -48,15 +57,15 @@ one more command:
 
 That's fucking it.
 
-## Where the fuck did it go?
+## Where the fuck is it?
 
 Assuming you didn't completely fuck this up, if your super shitty simple
-static site repository is at `foobar/my-shitty-site` then it's gonna be
+static site repo is at `foobar/my-shitty-site` then it's gonna be
 public on the web at  
 
     https://foobar.github.io/my-shitty-site
 
-Congratulations genius, you're on the Internet.
+Congratulations genius, you're on the fucking Internet.
 
 ## What fucking license does this software use?
 
@@ -65,3 +74,4 @@ this shitty piece of shit?
 
 Seriously though this software is released under the terms and conditions
 of the [WTFPL](LICENSE).
+
