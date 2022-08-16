@@ -58,3 +58,10 @@ public on the web at
 
 Congratulations genius, you're on the Internet.
 
+## What fucking license does this software use?
+
+License? You're asking about a fucking _license_? Have you _seen_
+this shitty piece of shit?
+
+Seriously though this software is released under the terms and conditions
+of the [WTFPL](LICENSE).
