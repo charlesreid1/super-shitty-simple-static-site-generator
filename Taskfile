@@ -1,6 +1,9 @@
 #!/bin/bash
 
 
+REPO="charlesreid1/super-shitty-static-site-generator"
+
+
 function i-suck-at-python {
     python3 -m venv .venv
     ./.venv/bin/python3 -m pip install markdown
@@ -17,6 +20,34 @@ function serve {
     cd output
     python -m http.server 8000
     )
+}
+
+function deploy {
+    # This function is a piece of shit. FYI.
+    rm -fr output
+    # Change this to your own fucking repo, asshole.
+    git clone -b gh-pages git@${GH_URL}:${REPO}.git output
+    rm -fr output/*
+    echo "Generating the shit out of this shitty content..."
+
+    build
+
+    #(
+    #echo "Adding all your new shit to git..."
+    #cd output
+    #git add -A .
+    #git commit -a -m "Automatic fucking deploy, asshole, out of the way - it's $(date -u +"%Y-%m-%d-%H-%M-%S")"
+    #RESULT=$?
+    #if [ $RESULT -eq 0 ]; then
+    #    echo "All your shit is in git. Congratu-fucking-lations."
+    #else
+    #    echo "None of your shit is in git. What the fuck, git? Cleaning up some shit, hang on."
+    #    echo rm -fr output
+    #    exit 1
+    #fi
+    #)
+    #echo "Fuck it I'm outta here"
+    #rm -fr output
 }
 
 function help {
