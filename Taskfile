@@ -26,7 +26,7 @@ function deploy {
     # This function is a piece of shit. FYI.
     rm -fr output
     # Change this to your own fucking repo, asshole.
-    git clone -b gh-pages git@${GH_URL}:${REPO}.git output
+    git clone -b gh-pages git@github.com:${REPO}.git output
     rm -fr output/*
     echo "Generating the shit out of this shitty content..."
 
