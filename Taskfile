@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+function i-suck-at-python {
+    python3 -m venv .venv
+    ./.venv/bin/python3 -m pip install markdown
+}
+
+function build {
+    mkdir -p output/
+    ./.venv/bin/python3 make_super_shitty_site.py
+}
+
+function serve {
+    build
+    (
+    cd output
+    python -m http.server 8000
+    )
+}
+
+function help {
+    echo "$0 <task> <args>"
+    echo "Tasks:"
+    compgen -A function | cat -n
+}
+
+"$@"

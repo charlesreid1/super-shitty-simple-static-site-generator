@@ -29,16 +29,16 @@ Don't overcomplicate it.
 You wanna build the project? Okay skipper, strap in.
 Copy and paste this into your terminal:
 
-    pip install markdown
+    ./Taskfile i-suck-at-python
 
-That's gonna do a bunch of shit, and you'll be like what the fuck.
-But just fucking do it.
+That's gonna do a bunch of Python shit, and you'll be like,
+_"What the fuck, I don't even,"_ but just fucking do it.
 
 Now copy and paste this into your terminal:
 
     ./Taskfile build
 
-Don't fucking ask where to run that command, bozo,
+Don't fucking ask where to run that command, shitlord,
 you already know you should be running all these
 commands from the repository directory.
 
@@ -74,13 +74,22 @@ public on the web at
 
 Congratulations genius, you're on the fucking Internet.
 
-## What fucking license does this software use?
+## Is there a fucking example?
 
-License? You're asking about a fucking _license_? Have you _seen_
-this shitty piece of shit?
+Of course there's a fucking example. THIS IS THE FUCKING EXAMPLE:
 
-Seriously though this software is released under the terms and conditions
-of the [WTFPL](LICENSE).
+<https://charlesreid1.github.io/super-shitty-simple-static-site-generator>
+
+## I read about requirements.txt on StackOverflow, where's yours?
+
+Go scroll to the top of the fucking page. No, no, I'll wait. Go do it
+and come back here. What did you see?
+
+That's right, bonehead, _simple_. 
+
+Go ahead. Open the Taskfile. Use nano if you want. Take a
+good long look at that `i-suck-at-python` task. That's the finest, choicest
+pip install of a single package you're gonna see for a long time.
 
 ## I have a fucking issue.
 
@@ -89,3 +98,12 @@ Too bad sport, issues are closed. Go fuck yourself.
 ## I have a fucking pull request.
 
 NO YOU FUCKING DON'T
+
+## What fucking license does this software use?
+
+License? You're asking about a fucking _license_? Have you _seen_
+this shitty piece of shit?
+
+Seriously though this software is released under the terms and conditions
+of the [WTFPL](LICENSE).
+
