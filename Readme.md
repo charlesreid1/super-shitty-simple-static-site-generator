@@ -29,9 +29,16 @@ Don't overcomplicate it.
 You wanna build the project? Okay skipper, strap in.
 Copy and paste this into your terminal:
 
+    pip install markdown
+
+That's gonna do a bunch of shit, and you'll be like what the fuck.
+But just fucking do it.
+
+Now copy and paste this into your terminal:
+
     ./Taskfile build
 
-Don't fucking ask where to run that command, numnuts,
+Don't fucking ask where to run that command, bozo,
 you already know you should be running all these
 commands from the repository directory.
 
@@ -75,3 +82,10 @@ this shitty piece of shit?
 Seriously though this software is released under the terms and conditions
 of the [WTFPL](LICENSE).
 
+## I have a fucking issue.
+
+Too bad sport, issues are closed. Go fuck yourself.
+
+## I have a fucking pull request.
+
+NO YOU FUCKING DON'T
