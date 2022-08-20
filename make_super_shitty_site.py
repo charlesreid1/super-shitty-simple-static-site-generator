@@ -35,8 +35,10 @@ with open(filename, 'r') as f:
 # Now take a big HTML dump into that HTML toilet you call a website.
 htmlname = 'output/index.html'
 
-shutil.rmtree('output/')
-os.mkdir('output/')
+try:
+    os.remove('output/index.html')
+except FileNotFoundError:
+    pass
 with open(htmlname, 'w') as f:
     f.write(html)
 

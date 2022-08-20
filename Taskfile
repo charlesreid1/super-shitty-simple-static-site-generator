@@ -12,9 +12,10 @@ function i-suck-at-python {
 
 function gimme-pages {
     rm -fr output
-    git clone git@github.com:${REPO}.git output
+    git clone git@github.com:${REPO}.git output/
     rm -fr output/*
-    cd output
+    (
+    cd output/
     git checkout --orphan gh-pages
     cat << EOF > index.html
 <h2>hello world</h2>
@@ -22,6 +23,8 @@ EOF
     git add index.html
     git commit index.html -m 'Start some shit'
     git push origin gh-pages
+    )
+    rm -fr output/
 }
 
 
@@ -39,31 +42,32 @@ function serve {
 }
 
 function deploy {
+    set +x
     # This function is a piece of shit. FYI.
-    rm -fr output
+    rm -fr output/
     # Change this to your own fucking repo, asshole.
     git clone -b gh-pages git@github.com:${REPO}.git output
     rm -fr output/*
-    echo "Generating the shit out of this shitty content..."
+    echo "About to generate the shit out of this shitty content..."
 
     build
 
-    #(
-    #echo "Adding all your new shit to git..."
-    #cd output
-    #git add -A .
-    #git commit -a -m "Automatic fucking deploy, asshole, out of the way - it's $(date -u +"%Y-%m-%d-%H-%M-%S")"
-    #RESULT=$?
-    #if [ $RESULT -eq 0 ]; then
-    #    echo "All your shit is in git. Congratu-fucking-lations."
-    #else
-    #    echo "None of your shit is in git. What the fuck, git? Cleaning up some shit, hang on."
-    #    echo rm -fr output
-    #    exit 1
-    #fi
-    #)
-    #echo "Fuck it I'm outta here"
-    #rm -fr output
+    (
+    echo "Adding your new shit to your git shit..."
+    cd output/
+    git add -A .
+    git commit -a -m "Automatic fucking deploy, asshole, out of the way - it's $(date -u +"%Y-%m-%d-%H-%M-%S")"
+    git push origin gh-pages
+    RESULT=$?
+    if [ $RESULT -eq 0 ]; then
+        echo "All your shit is in git. Congratu-fucking-lations."
+    else
+        echo "None of your shit is in git. The FUCk, git? Cleaning up some shit, hang on."
+        #echo rm -fr output
+        exit 1
+    fi
+    )
+    echo "Fuck it I'm outta here"
 }
 
 function help {
