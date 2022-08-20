@@ -36,6 +36,10 @@ _"What the fuck, I don't even,"_ but just fucking do it.
 
 Now copy and paste this into your terminal:
 
+    ./Taskfile gimme-pages
+
+Now maybe you can start to get some shit done. Run this:
+
     ./Taskfile build
 
 Don't fucking ask where to run that command, shitlord,

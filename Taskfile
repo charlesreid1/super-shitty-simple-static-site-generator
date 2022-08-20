@@ -1,13 +1,29 @@
 #!/bin/bash
+set -eux
 
 
-REPO="charlesreid1/super-shitty-static-site-generator"
+REPO="charlesreid1/super-shitty-simple-static-site-generator"
 
 
 function i-suck-at-python {
     python3 -m venv .venv
     ./.venv/bin/python3 -m pip install markdown
 }
+
+function gimme-pages {
+    rm -fr output
+    git clone git@github.com:${REPO}.git output
+    rm -fr output/*
+    cd output
+    git checkout --orphan gh-pages
+    cat << EOF > index.html
+<h2>hello world</h2>
+EOF
+    git add index.html
+    git commit index.html -m 'Start some shit'
+    git push origin gh-pages
+}
+
 
 function build {
     mkdir -p output/
